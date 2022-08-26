@@ -1,4 +1,4 @@
-import { REQUEST_SUCCESS } from '../actions';
+import { COINS_REQUEST_SUCCESS, ADD_EXPENSE } from '../actions';
 
 const INITIAL_STATE = {
   currencies: [],
@@ -9,10 +9,16 @@ const INITIAL_STATE = {
 
 function wallet(state = INITIAL_STATE, action) {
   switch (action.type) {
-  case REQUEST_SUCCESS:
+  case COINS_REQUEST_SUCCESS:
     return {
       ...state,
       currencies: Object.keys(action.payload).filter((coin) => coin !== 'USDT'),
+    };
+
+  case ADD_EXPENSE:
+    return {
+      ...state,
+      expenses: [...state.expenses, action.payload],
     };
 
   default:
