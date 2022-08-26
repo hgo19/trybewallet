@@ -32,9 +32,9 @@ class Login extends React.Component {
 
   handleSubmit = (event) => {
     const { dispatch, history } = this.props;
-    const { email, password } = this.state;
+    const { email } = this.state;
     event.preventDefault();
-    dispatch(loginAction(email, password));
+    dispatch(loginAction(email));
     history.push('/carteira');
   };
 
@@ -69,7 +69,7 @@ class Login extends React.Component {
             type="submit"
             disabled={ isDisabled }
           >
-            Login
+            Entrar
 
           </button>
         </form>

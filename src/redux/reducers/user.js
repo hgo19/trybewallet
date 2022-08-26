@@ -2,7 +2,6 @@ import { LOGIN_ACTION } from '../actions';
 
 const INITIAL_STATE = {
   email: '',
-  password: '',
 };
 
 function user(state = INITIAL_STATE, action) {
@@ -11,7 +10,6 @@ function user(state = INITIAL_STATE, action) {
     return {
       ...state,
       email: action.email,
-      password: action.password,
     };
 
   default:
