@@ -18,7 +18,7 @@ class WalletForm extends Component {
     };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     const { dispatch } = this.props;
     dispatch(fetchCoins());
   }
