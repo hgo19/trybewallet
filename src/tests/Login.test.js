@@ -17,7 +17,7 @@ describe('Testa se a página de login renderiza corretamente', () => {
     expect(pathname).toBe('/');
   });
 
-  it('Verifica se ', () => {
+  // it('Verifica se ', () => {
 
-  })
+  // })
 });

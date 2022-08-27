@@ -41,9 +41,6 @@ class WalletForm extends Component {
     this.setState({
       id: uptdId,
       value: '',
-      currency: 'USD',
-      method: 'Dinheiro',
-      tag: '',
       description: '',
     });
   };
