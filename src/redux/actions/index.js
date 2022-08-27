@@ -6,6 +6,7 @@ export const COINS_REQUEST_SUCCESS = 'Request Sucess';
 
 export const ADD_EXPENSE = 'Adicionar Despesa';
 export const DELETE_EXPENSE = 'Deletar Despesa';
+export const EDIT_EXPENSE = 'Editar Despesa';
 
 export const loginAction = (email) => ({ type: LOGIN_ACTION, email });
 
@@ -19,3 +20,5 @@ export const fetchCoins = () => async (dispatch) => {
 export const addExpenseAction = (payload) => ({ type: ADD_EXPENSE, payload });
 
 export const deleteExpense = (payload) => ({ type: DELETE_EXPENSE, payload });
+
+export const expenseToEdit = (payload) => ({ type: EDIT_EXPENSE, payload });

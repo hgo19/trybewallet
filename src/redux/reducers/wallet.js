@@ -1,4 +1,8 @@
-import { COINS_REQUEST_SUCCESS, ADD_EXPENSE, DELETE_EXPENSE } from '../actions';
+import {
+  COINS_REQUEST_SUCCESS,
+  ADD_EXPENSE,
+  DELETE_EXPENSE,
+  EDIT_EXPENSE } from '../actions';
 
 const INITIAL_STATE = {
   currencies: [],
@@ -19,12 +23,23 @@ function wallet(state = INITIAL_STATE, action) {
     return {
       ...state,
       expenses: [...state.expenses, action.payload],
+      editor: false,
+      idToEdit: 0,
     };
 
   case DELETE_EXPENSE:
     return {
       ...state,
       expenses: [...action.payload],
+      editor: false,
+      idToEdit: 0,
+    };
+
+  case EDIT_EXPENSE:
+    return {
+      ...state,
+      editor: true,
+      idToEdit: action.payload,
     };
 
   default:
