@@ -114,10 +114,10 @@ class WalletForm extends Component {
             Moeda:
             <select
               id="currency"
-              data-testid="currency-input"
               name="currency"
               value={ currency }
               onChange={ this.handleChange }
+              data-testid="currency-input"
             >
               {moedas.map((coin, index) => (
                 <option
@@ -133,10 +133,10 @@ class WalletForm extends Component {
             Método de Pagamento:
             <select
               id="method"
-              data-testid="method-input"
               name="method"
               value={ method }
               onChange={ this.handleChange }
+              data-testid="method-input"
             >
               {paymentsTypes.map((type, index) => (
                 <option
@@ -152,10 +152,10 @@ class WalletForm extends Component {
             TAG:
             <select
               id="tag"
-              data-testid="tag-input"
               name="tag"
               value={ tag }
               onChange={ this.handleChange }
+              data-testid="tag-input"
             >
               {tags.map((element, index) => (
                 <option
