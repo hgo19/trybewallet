@@ -59,7 +59,7 @@ describe('Testa o componente WalletForm', () => {
     userEvent.type(descInput);
   });
 
-  it('Verifica o botão de salvar despesas salva uma despesa', () => {
+  it('Verifica o botão de salvar despesas salva uma despesa', async () => {
     renderWithRouterAndRedux(<WalletForm />, { initialState: { wallet: WALLET_STATE } });
 
     const saveButton = screen.getByRole('button', { name: /Adicionar despesa/i });

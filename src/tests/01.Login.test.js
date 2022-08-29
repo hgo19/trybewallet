@@ -3,6 +3,7 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import renderWithRouterAndRedux from './helpers/renderWith';
 import App from '../App';
+import mockData from './helpers/mockData';
 
 const EMAIL_INPUT_TESTID = 'email-input';
 const PASS_INPUT_TESTID = 'password-input';
@@ -44,7 +45,11 @@ describe('Testa se a página de login renderiza corretamente', () => {
     expect(loginButton).not.toHaveAttribute('disabled');
   });
 
-  it('Verifica se ao clicar no botao a página redirecionadda é "/carteira"', () => {
+  it('Verifica se ao clicar no botao a página redirecionadda é "/carteira"', async () => {
+    global.fetch = jest.fn(async () => ({
+      json: async () => mockData,
+    }));
+
     const { history } = renderWithRouterAndRedux(<App />);
 
     const validEmail = 'teste@teste.com';
@@ -62,5 +67,7 @@ describe('Testa se a página de login renderiza corretamente', () => {
 
     const { pathname } = history.location;
     expect(pathname).toBe('/carteira');
+
+    expect(global.fetch).toBeCalled();
   });
 });
