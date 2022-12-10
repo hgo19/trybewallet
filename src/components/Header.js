@@ -13,12 +13,25 @@ class Header extends Component {
 
     return (
       <header
-        className="container-fluid d-flex justify-content-between align-items-center "
+        className="d-flex justify-content-between align-items-center "
         style={ { background: 'white' } }
       >
-        <h1 className="h1">TrybeWallet</h1>
-        <div>
-          <p data-testid="email-field">{email}</p>
+        <h1
+          className="h1"
+          style={ { padding: '5px' } }
+        >
+          TrybeWallet
+
+        </h1>
+        <div
+          className="text-light bg-dark"
+          style={ { padding: '10px' } }
+        >
+          <p data-testid="email-field">
+            Usuário:
+            {' '}
+            {email}
+          </p>
           <p>
             Despesas Totais:
             {' '}
