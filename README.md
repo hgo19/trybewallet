@@ -50,7 +50,8 @@ npm start
 TrybeWallet é uma aplicação que logo ao ser aberta solicitará o login do usuário através da seguinte página:
 <details>
 <summary><strong>Imagem tela de Login </strong></summary>
-![LoginTrybeWallet](imagesReadMe/trybeWalletLogin.png)
+
+![LoginTrybeWallet](./imagesReadMe/trybeWalletLogin.png)
 </details>
 
 O Login só é permitido em caso de um email com formato válido ('teste@gmail.com'), e com uma senha com mais de 6 characters.
@@ -58,7 +59,8 @@ O Login só é permitido em caso de um email com formato válido ('teste@gmail.c
 Após isso o usuário será redirecionado para a página da carteira, onde terá um formulário para preencher com os respectivos gastos, e no canto superior direito terá o valor da despesa total.
 <details>
 <summary><strong>Imagem tela de Carteira </strong></summary>
-![CarteiraTrybe](imagesReadMe/carteiraTrybe.png)
+
+![CarteiraTrybe](./imagesReadMe/carteiraTrybe.png)
 </details>
 Na página de Carteira é possível que o usuário adicione, edite e delete despesas, além de como dito anteriormente, ver o total no canto superior direito.
 
