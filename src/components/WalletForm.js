@@ -96,10 +96,14 @@ class WalletForm extends Component {
     const paymentsTypes = ['Dinheiro', 'Cartão de crédito', 'Cartão de débito'];
     const tags = ['Alimentação', 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
     return (
-      <section>
-        WalletForm
-        <form>
-          <label htmlFor="expense-value">
+      <section
+        className="container-fluid"
+        style={ { background: '#E5E5E5' } }
+      >
+        <form
+          style={ { padding: '10px' } }
+        >
+          <label htmlFor="expense-value" className="form-label">
             Valor:
             <input
               type="number"
@@ -110,7 +114,7 @@ class WalletForm extends Component {
               data-testid="value-input"
             />
           </label>
-          <label htmlFor="currency">
+          <label htmlFor="currency" className="form-label">
             Moeda:
             <select
               id="currency"
@@ -129,7 +133,7 @@ class WalletForm extends Component {
               )) }
             </select>
           </label>
-          <label htmlFor="method">
+          <label htmlFor="method" className="form-label">
             Método de Pagamento:
             <select
               id="method"
@@ -148,7 +152,7 @@ class WalletForm extends Component {
               ))}
             </select>
           </label>
-          <label htmlFor="tag">
+          <label htmlFor="tag" className="form-label">
             TAG:
             <select
               id="tag"
@@ -167,7 +171,7 @@ class WalletForm extends Component {
               ))}
             </select>
           </label>
-          <label htmlFor="expense-description">
+          <label htmlFor="expense-description" className="form-label">
             Descrição:
             <input
               type="text"

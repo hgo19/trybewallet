@@ -29,11 +29,12 @@ const DESCRIPTION_INPUT_TESTID = 'description-input';
 const ALIMENTACAO_STRING = 'Alimentação';
 
 describe('Testa adição e edição de despesas', () => {
-  it('Verifica se uma despesa é adicionada a página', async () => {
+  beforeEach(() => {
     global.fetch = jest.fn(async () => ({
       json: async () => mockData,
     }));
-
+  });
+  it('Verifica se uma despesa é adicionada a página', async () => {
     renderWithRouterAndRedux(<App />, { initialEntries: ['/carteira'], initialState: { wallet: WALLET_STATE } });
 
     const saveButton = screen.getByRole('button', { name: /adicionar despesa/i });
@@ -75,9 +76,6 @@ describe('Testa adição e edição de despesas', () => {
     expect(umDolarText).toBeInTheDocument();
   });
   it('Verifica se uma despesa é excluída ao licar no botão.', async () => {
-    global.fetch = jest.fn(async () => ({
-      json: async () => mockData,
-    }));
     renderWithRouterAndRedux(<App />, { initialEntries: ['/carteira'], initialState: { wallet: WALLET_STATE } });
 
     const deleteButon = screen.getByRole('button', { name: /excluir/i });
@@ -91,10 +89,6 @@ describe('Testa adição e edição de despesas', () => {
   });
 
   it('Verifica se uma despesa ao clicar no botão é editada no WalletForm.', async () => {
-    global.fetch = jest.fn(async () => ({
-      json: async () => mockData,
-    }));
-
     renderWithRouterAndRedux(<App />, { initialEntries: ['/carteira'], initialState: { wallet: WALLET_STATE } });
 
     const editButton = screen.getByRole('button', { name: /editar/i });

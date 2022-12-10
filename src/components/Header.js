@@ -12,15 +12,20 @@ class Header extends Component {
     }, 0);
 
     return (
-      <header>
-        <h1>TrybeWallet</h1>
-        <p data-testid="email-field">{email}</p>
-        <p>
-          Despesas Totais:
-          {' '}
-          <span data-testid="total-field">{totalField.toFixed(2)}</span>
-          <span data-testid="header-currency-field">BRL</span>
-        </p>
+      <header
+        className="container-fluid d-flex justify-content-between align-items-center "
+        style={ { background: 'white' } }
+      >
+        <h1 className="h1">TrybeWallet</h1>
+        <div>
+          <p data-testid="email-field">{email}</p>
+          <p>
+            Despesas Totais:
+            {' '}
+            <span data-testid="total-field">{totalField.toFixed(2)}</span>
+            <span data-testid="header-currency-field">BRL</span>
+          </p>
+        </div>
       </header>
     );
   }

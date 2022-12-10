@@ -41,38 +41,51 @@ class Login extends React.Component {
   render() {
     const { email, password, isDisabled } = this.state;
     return (
-      <main>
-        <form onSubmit={ this.handleSubmit }>
-          <label htmlFor="emailInput">
-            Email:
-            <input
-              id="emailInput"
-              type="email"
-              name="email"
-              value={ email }
-              onChange={ this.handleChange }
-              data-testid="email-input"
-            />
-          </label>
-          <label htmlFor="passInput">
-            Senha:
-            <input
-              id="passInput"
-              type="password"
-              name="password"
-              value={ password }
-              onChange={ this.handleChange }
-              data-testid="password-input"
-            />
-          </label>
-          <button
-            type="submit"
-            disabled={ isDisabled }
+      <main className="container-fluid">
+        <div
+          className="row justify-content-center align-items-center h100"
+          style={ { height: '100vh' } }
+        >
+          <form
+            onSubmit={ this.handleSubmit }
+            className="col-10 col-md-6 col-lg-4 border rounded-3 p-4 shadow"
+            style={ { maxWidth: '400px', background: 'white' } }
           >
-            Entrar
+            <h1 className="h1">TrybeWallet</h1>
+            <label htmlFor="emailInput" className="input-group mb-3">
+              <input
+                id="emailInput"
+                type="email"
+                name="email"
+                value={ email }
+                onChange={ this.handleChange }
+                data-testid="email-input"
+                className="form-control"
+                placeholder="Email"
+              />
+            </label>
+            <label htmlFor="passInput" className="input-group mb-3">
+              <input
+                id="passInput"
+                type="password"
+                name="password"
+                value={ password }
+                onChange={ this.handleChange }
+                data-testid="password-input"
+                className="form-control"
+                placeholder="Password"
+              />
+            </label>
+            <button
+              type="submit"
+              disabled={ isDisabled }
+              className="btn btn-success"
+            >
+              Entrar
 
-          </button>
-        </form>
+            </button>
+          </form>
+        </div>
       </main>
     );
   }

@@ -19,18 +19,18 @@ class Table extends Component {
     const { expenses } = this.props;
     return (
       <section>
-        <table>
+        <table className="table table-bordered table-sm align-middle">
           <thead>
-            <tr>
-              <th>Descrição</th>
-              <th>Tag</th>
-              <th>Método de pagamento</th>
-              <th>Valor</th>
-              <th>Moeda</th>
-              <th>Câmbio utilizado</th>
-              <th>Valor convertido</th>
-              <th>Moeda de conversão</th>
-              <th>Editar/Excluir</th>
+            <tr className="table-dark">
+              <th scope="col">Descrição</th>
+              <th scope="col">Tag</th>
+              <th scope="col">Método de pagamento</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Moeda</th>
+              <th scope="col">Câmbio utilizado</th>
+              <th scope="col">Valor convertido</th>
+              <th scope="col">Moeda de conversão</th>
+              <th scope="col">Editar/Excluir</th>
             </tr>
           </thead>
           {expenses.map((element) => {
