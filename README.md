@@ -54,7 +54,7 @@ TrybeWallet é uma aplicação que logo ao ser aberta solicitará o login do usu
 ![LoginTrybeWallet](./imagesReadMe/trybeWalletLogin.png)
 </details>
 
-O Login só é permitido em caso de um email com formato válido ('teste@gmail.com'), e com uma senha com mais de 6 characters.
+O Login só é permitido em caso de um email com formato válido (```"teste@gmail.com"```), e com uma senha com mais de 6 characters.
 <br>
 Após isso o usuário será redirecionado para a página da carteira, onde terá um formulário para preencher com os respectivos gastos, e no canto superior direito terá o valor da despesa total.
 <details>
